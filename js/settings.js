@@ -14,18 +14,7 @@ export function processInput() {
   petSettings.hidden = !document.getElementById("pet-select").selectedIndex > 0;
   //id 27 and 28 are exclusive
   if (!petSettings.hidden) {
-    const selectedPetId = getPetInfo().id;
-    const petBaseSelect = document.getElementById("pet-base-select");
-    [...petBaseSelect.options]
-    .filter(option => option.value.startsWith("27") || option.value.startsWith("28"))
-    .forEach(option => {
-      if (option.value.split("_")[1] === selectedPetId) {
-        option.hidden = false;
-      } else {
-        option.selected = false;
-        option.hidden = true;
-      }
-    });
+    handleExclusivePetSkills();
   }
 
   // e pet
@@ -35,6 +24,27 @@ export function processInput() {
   document.getElementById("e-pet-settings").hidden = !evoPet;
   const petLevel = document.getElementById("pet-level");
   petLevel.value = constrain(petLevel.value, evoPet ? 1 : 0, evoPet ? 21 : 27);
+}
+
+function handleExclusivePetSkills() {
+  const selectedPetId = getPetInfo().id;
+  const petBaseSelect = document.getElementById("pet-base-select");
+  ["27", "28"].forEach(x => {
+    const specialSelected = [...petBaseSelect.options]
+    .filter(option => option.value.startsWith(x))
+    .some(option => option.selected);
+    [...petBaseSelect.options]
+    .filter(option => option.value.startsWith(x))
+    .forEach(option => {
+      if (option.value.split("_")[1] === selectedPetId) {
+        option.hidden = false;
+        option.selected = specialSelected;
+      } else {
+        option.selected = false;
+        option.hidden = true;
+      }
+    });
+  });
 }
 
 export function createPlayerObject() {

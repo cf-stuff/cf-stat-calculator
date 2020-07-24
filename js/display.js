@@ -62,69 +62,7 @@ export async function updateDisplay() {
   lineSeparator(ctx, 250);
 
   // stats
-  // hp + sp
-  ctx.font = "1.3em arial";
-  ctx.fillStyle = "#FFFFFF";
-  ctx.textAlign = "center";
-  ctx.fillText(`${playerObject.stats.hp}/${playerObject.stats.hp}`, 290, 53);
-  ctx.fillText(`${playerObject.stats.sp}/${playerObject.stats.sp}`, 320, 82);
-
-  // atk
-  ctx.textAlign = "start";
-  ctx.font = "1.1em arial";
-  ctx.fillStyle = "#ffffff";
-  ctx.fillText("ATK", 15, 280);
-  ctx.fillStyle = "#b6a357";
-  ctx.fillText(` ${playerObject.stats.minatk} ~ ${playerObject.stats.maxatk}`, 55, 280);
-
-  // spd
-  ctx.font = "1.1em arial";
-  ctx.fillStyle = "#ffffff";
-  ctx.fillText("SPD", 15, 305);
-  ctx.fillStyle = "#b6a357";
-  ctx.fillText(` ${playerObject.stats.spd}`, 55, 305);
-
-  // hit
-  ctx.font = "1.1em arial";
-  ctx.fillStyle = "#ffffff";
-  ctx.fillText("HIT", 15, 330);
-  ctx.fillStyle = "#b6a357";
-  ctx.fillText(` ${playerObject.stats.hit}`, 50, 330);
-
-  // eva
-  ctx.font = "1.1em arial";
-  ctx.fillStyle = "#ffffff";
-  ctx.fillText("EVA", 105, 330);
-  ctx.fillStyle = "#b6a357";
-  ctx.fillText(` ${playerObject.stats.eva}`, 140, 330);
-
-  // brk
-  ctx.font = "1.1em arial";
-  ctx.fillStyle = "#ffffff";
-  ctx.fillText("BRK", 15, 355);
-  ctx.fillStyle = "#b6a357";
-  ctx.fillText(` ${playerObject.stats.brk}`, 50, 355);
-
-  // def
-  ctx.font = "1.1em arial";
-  ctx.fillStyle = "#ffffff";
-  ctx.fillText("DEF", 105, 355);
-  ctx.fillStyle = "#b6a357";
-  ctx.fillText(` ${playerObject.stats.def}`, 140, 355);
-
-  // crt
-  ctx.font = "1.1em arial";
-  ctx.fillStyle = "#ffffff";
-  ctx.fillText("CRT", 15, 380);
-  ctx.fillStyle = "#b6a357";
-  ctx.fillText(` ${playerObject.stats.crt}`, 50, 380);
-
-  // res
-  ctx.font = "1.1em arial";
-  ctx.fillStyle = "#ffffff";
-  ctx.fillText("RES", 105, 380);
-  ctx.fillStyle = "#b6a357";
-  ctx.fillText(` ${playerObject.stats.res}`, 140, 380);
+  displayStats(ctx, playerObject.stats);
 
   lineSeparator(ctx, 400);
 
@@ -158,6 +96,40 @@ export async function updateDisplay() {
       ctx.drawImage(await ImageHandler.getImage("fighter-skills", playerObject.fighter.skills[resetIndex++]), 0, 0, 64, 64, 17 + x * 50, 592, 41, 41);
     }
   }
+}
+
+function displayStats(ctx, stats) {
+  // hp + sp
+  ctx.font = "1.3em arial";
+  ctx.fillStyle = "#FFFFFF";
+  ctx.textAlign = "center";
+  ctx.fillText(`${stats.hp}/${stats.hp}`, 290, 53);
+  ctx.fillText(`${stats.sp}/${stats.sp}`, 320, 82);
+
+  // stat names
+  ctx.textAlign = "start";
+  ctx.font = "1.1em arial";
+  ctx.fillStyle = "#ffffff";
+  ctx.fillText("ATK", 15, 280);
+  ctx.fillText("SPD", 15, 305);
+  ctx.fillText("HIT", 15, 330);
+  ctx.fillText("EVA", 105, 330);
+  ctx.fillText("BRK", 15, 355);
+  ctx.fillText("DEF", 105, 355);
+  ctx.fillText("CRT", 15, 380);
+  ctx.fillText("RES", 105, 380);
+
+  // stat values
+  ctx.fillStyle = "#b6a357";
+  ctx.fillText(` ${stats.minatk} ~ ${stats.maxatk}`, 55, 280);
+  ctx.fillText(` ${stats.spd}`, 55, 305);
+  ctx.fillText(` ${stats.hit}`, 50, 330);
+  ctx.fillText(` ${stats.eva}`, 140, 330);
+  ctx.fillText(` ${stats.brk}`, 50, 355);
+  ctx.fillText(` ${stats.def}`, 140, 355);
+  ctx.fillText(` ${stats.crt}`, 50, 380);
+  ctx.fillText(` ${stats.res}`, 140, 380);
+  
 }
 
 function lineSeparator(ctx, y) {
