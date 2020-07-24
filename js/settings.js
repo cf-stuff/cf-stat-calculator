@@ -1,8 +1,13 @@
 import JsonHandler from "./JsonHandler.js";
 
+const constrain = (x, min, max) => Math.min(Math.max(x, min), max);
+
 export function processInput() {
   // e fighter
-  document.getElementById("e-fighter-settings").hidden = !document.getElementById("fighter-evolved").checked;
+  const evoFighter = document.getElementById("fighter-evolved").checked;
+  document.getElementById("e-fighter-settings").hidden = !evoFighter;
+  const fighterLevel = document.getElementById("fighter-level");
+  fighterLevel.value = constrain(fighterLevel.value, evoFighter ? 1 : 0, evoFighter ? 21 : 34);
 
   // pet
   const petSettings = document.getElementById("pet-settings");
@@ -25,6 +30,11 @@ export function processInput() {
 
   // e pet
   document.getElementById("e-pet-settings").hidden = !document.getElementById("pet-evolved").checked;
+
+  const evoPet = document.getElementById("pet-evolved").checked;
+  document.getElementById("e-pet-settings").hidden = !evoPet;
+  const petLevel = document.getElementById("pet-level");
+  petLevel.value = constrain(petLevel.value, evoPet ? 1 : 0, evoPet ? 21 : 27);
 }
 
 export function createPlayerObject() {
