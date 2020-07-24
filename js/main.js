@@ -3,12 +3,9 @@ import {updateDisplay} from "./display.js";
 
 (async function() {
   await JsonHandler.initialise();
-
-  fillOptions("fighter");
-  fillOptions("fighter-reset");
-  fillOptions("fighter-healing");
-  fillOptions("pet");
-  fillOptions("totem");
+  [
+    "fighter", "fighter-reset", "fighter-healing", "pet", "totem", "skill", "resistance"
+  ].forEach(fillOptions);
 
   updateDisplay();
   document.getElementById("settings").addEventListener("change", updateDisplay);

@@ -24,13 +24,9 @@ export function createPlayerObject() {
       crt: 1500,
       res: 1000,
     },
-    resistance: [
-      4, 9
-    ],
+    resistance: getResistance(),
     totem: getTotemInfo(),
-    skills: [
-      10, 20, 35, 36, 38, 8, 17
-    ]
+    skills: getSkills()
   };
   return output;
 }
@@ -91,4 +87,18 @@ function getTotemInfo() {
     return null;
   }
   return totemSelect.options[totemSelect.selectedIndex].value;
+}
+
+function getResistance() {
+  return [...document.getElementById("resistance-select").options]
+  .filter(option => option.selected)
+  .map(option => option.value)
+  .splice(0, 2);
+}
+
+function getSkills() {
+  return [...document.getElementById("skill-select").options]
+  .filter(option => option.selected)
+  .map(option => option.value)
+  .splice(0, 7);
 }
