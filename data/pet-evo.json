@@ -1,0 +1,196 @@
+{
+  "data": [
+    {
+      "id": 31,
+      "name": "20 def"
+    },
+    {
+      "id": 32,
+      "name": "20 brk"
+    },
+    {
+      "id": 33,
+      "name": "20 res"
+    },
+    {
+      "id": 34,
+      "name": "20 crt"
+    },
+    {
+      "id": 35,
+      "name": "10% hp"
+    },
+    {
+      "id": 36,
+      "name": "20 maxatk"
+    },
+    {
+      "id": 37,
+      "name": "20 hit"
+    },
+    {
+      "id": 38,
+      "name": "10 sp"
+    },
+    {
+      "id": 39,
+      "name": "10% atk"
+    },
+    {
+      "id": 40,
+      "name": "20 eva"
+    },
+    {
+      "id": 41,
+      "name": "50 hp"
+    },
+    {
+      "id": 42,
+      "name": "10 spd"
+    },
+    {
+      "id": 51,
+      "name": "30 def"
+    },
+    {
+      "id": 52,
+      "name": "30 brk"
+    },
+    {
+      "id": 53,
+      "name": "30 res"
+    },
+    {
+      "id": 54,
+      "name": "30 crt"
+    },
+    {
+      "id": 55,
+      "name": "15% hp"
+    },
+    {
+      "id": 56,
+      "name": "30 maxatk"
+    },
+    {
+      "id": 57,
+      "name": "30 hit"
+    },
+    {
+      "id": 58,
+      "name": "20 sp"
+    },
+    {
+      "id": 59,
+      "name": "15% atk"
+    },
+    {
+      "id": 60,
+      "name": "30 eva"
+    },
+    {
+      "id": 61,
+      "name": "80 hp"
+    },
+    {
+      "id": 62,
+      "name": "20 spd"
+    },
+    {
+      "id": 71,
+      "name": "50 def"
+    },
+    {
+      "id": 72,
+      "name": "50 brk"
+    },
+    {
+      "id": 73,
+      "name": "50 res"
+    },
+    {
+      "id": 74,
+      "name": "50 crt"
+    },
+    {
+      "id": 75,
+      "name": "25% hp"
+    },
+    {
+      "id": 76,
+      "name": "50 maxatk"
+    },
+    {
+      "id": 77,
+      "name": "50 hit"
+    },
+    {
+      "id": 78,
+      "name": "30 sp"
+    },
+    {
+      "id": 79,
+      "name": "25% atk"
+    },
+    {
+      "id": 80,
+      "name": "50 eva"
+    },
+    {
+      "id": 81,
+      "name": "130 hp"
+    },
+    {
+      "id": 82,
+      "name": "30 spd"
+    },
+    {
+      "id": 91,
+      "name": "Bacteria"
+    },
+    {
+      "id": 92,
+      "name": "Draw Power"
+    },
+    {
+      "id": 93,
+      "name": "Arrival of Thunder God"
+    },
+    {
+      "id": 94,
+      "name": "Explosive Blow"
+    },
+    {
+      "id": 95,
+      "name": "Fire"
+    },
+    {
+      "id": 96,
+      "name": "Barbarism"
+    },
+    {
+      "id": 101,
+      "name": "Wine"
+    },
+    {
+      "id": 102,
+      "name": "Shield Wall"
+    },
+    {
+      "id": 103,
+      "name": "Meditation"
+    },
+    {
+      "id": 104,
+      "name": "Cleanse"
+    },
+    {
+      "id": 105,
+      "name": "Healing"
+    },
+    {
+      "id": 106,
+      "name": "Energy Shield"
+    }
+  ]
+}

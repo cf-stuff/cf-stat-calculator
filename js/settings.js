@@ -1,8 +1,30 @@
 import JsonHandler from "./JsonHandler.js";
 
 export function processInput() {
-  //e fighter
+  // e fighter
   document.getElementById("e-fighter-settings").hidden = !document.getElementById("fighter-evolved").checked;
+
+  // pet
+  const petSettings = document.getElementById("pet-settings");
+  petSettings.hidden = !document.getElementById("pet-select").selectedIndex > 0;
+  //id 27 and 28 are exclusive
+  if (!petSettings.hidden) {
+    const selectedPetId = getPetInfo().id;
+    const petBaseSelect = document.getElementById("pet-base-select");
+    [...petBaseSelect.options]
+    .filter(option => option.value.startsWith("27") || option.value.startsWith("28"))
+    .forEach(option => {
+      if (option.value.split("_")[1] === selectedPetId) {
+        option.hidden = false;
+      } else {
+        option.selected = false;
+        option.hidden = true;
+      }
+    });
+  }
+
+  // e pet
+  document.getElementById("e-pet-settings").hidden = !document.getElementById("pet-evolved").checked;
 }
 
 export function createPlayerObject() {
@@ -70,14 +92,42 @@ function getPetInfo() {
     return null;
   }
   const petId = petSelect.options[petSelect.selectedIndex].value;
+
+  const skills = [];
+  const possibleSkills = ["25", "26", "28"];
+  [...document.getElementById("pet-base-select").options]
+  .filter(options => options.selected)
+  .map(option => option.value)
+  .forEach(id => {
+    if (possibleSkills.some(x => id.startsWith(x))) {
+      skills.push(id);
+    }
+  });
+  let passiveAdded = false;
+  let activeAdded = false;
+  [...document.getElementById("pet-evo-select").options]
+  .filter(options => options.selected)
+  .map(option => option.value)
+  .filter(id => id > 90)
+  .forEach(id => {
+    if (id < 100) {
+      if (!passiveAdded) {
+        skills.push(id);
+        passiveAdded = true;
+      }
+    } else {
+      if (!activeAdded) {
+        skills.push(id);
+        activeAdded = true;
+      }
+    }
+  });
   return {
     id: petId,
     evo: document.getElementById("pet-evolved").checked,
     name: JsonHandler.getJson("pet").data.filter(x => x.id == petId)[0].name,
     plus: document.getElementById("pet-level").value,
-    skills: [
-      26, "28_1", 106
-    ]
+    skills
   };
 }
 

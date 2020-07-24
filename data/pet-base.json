@@ -1,0 +1,228 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "name": "30 def"
+    },
+    {
+      "id": 2,
+      "name": "60 def"
+    },
+    {
+      "id": 3,
+      "name": "50 brk"
+    },
+    {
+      "id": 4,
+      "name": "100 brk"
+    },
+    {
+      "id": 5,
+      "name": "50 res"
+    },
+    {
+      "id": 6,
+      "name": "100 res"
+    },
+    {
+      "id": 7,
+      "name": "50 crt"
+    },
+    {
+      "id": 8,
+      "name": "100 crt"
+    },
+    {
+      "id": 9,
+      "name": "5% hp"
+    },
+    {
+      "id": 10,
+      "name": "10% hp"
+    },
+    {
+      "id": 11,
+      "name": "10 maxatk"
+    },
+    {
+      "id": 12,
+      "name": "20 maxatk"
+    },
+    {
+      "id": 13,
+      "name": "50 hit"
+    },
+    {
+      "id": 14,
+      "name": "100 hit"
+    },
+    {
+      "id": 15,
+      "name": "10 sp"
+    },
+    {
+      "id": 16,
+      "name": "20 sp"
+    },
+    {
+      "id": 17,
+      "name": "5% atk"
+    },
+    {
+      "id": 18,
+      "name": "10% atk"
+    },
+    {
+      "id": 19,
+      "name": "25 eva"
+    },
+    {
+      "id": 20,
+      "name": "50 eva"
+    },
+    {
+      "id": 21,
+      "name": "30 hp"
+    },
+    {
+      "id": 22,
+      "name": "60 hp"
+    },
+    {
+      "id": 23,
+      "name": "5 spd"
+    },
+    {
+      "id": 24,
+      "name": "10 spd"
+    },
+    {
+      "id": 25,
+      "name": "Scratch"
+    },
+    {
+      "id": 26,
+      "name": "Block"
+    },
+    {
+      "id": "27_1",
+      "name": "50 eva"
+    },
+    {
+      "id": "27_2",
+      "name": "150 brk"
+    },
+    {
+      "id": "27_3",
+      "name": "60 hp"
+    },
+    {
+      "id": "27_4",
+      "name": "150 res"
+    },
+    {
+      "id": "27_5",
+      "name": "60 def"
+    },
+    {
+      "id": "27_6",
+      "name": "150 crt"
+    },
+    {
+      "id": "27_7",
+      "name": "10 spd"
+    },
+    {
+      "id": "27_8",
+      "name": "50 eva"
+    },
+    {
+      "id": "27_9",
+      "name": "150 hit"
+    },
+    {
+      "id": "27_10",
+      "name": "150 hit"
+    },
+    {
+      "id": "27_11",
+      "name": "150 brk"
+    },
+    {
+      "id": "27_12",
+      "name": "150 crt"
+    },
+    {
+      "id": "27_13",
+      "name": "150 brk"
+    },
+    {
+      "id": "27_15",
+      "name": "50 eva"
+    },
+    {
+      "id": "27_17",
+      "name": "10 spd"
+    },
+    {
+      "id": "28_1",
+      "name": "Stun"
+    },
+    {
+      "id": "28_2",
+      "name": "Seal"
+    },
+    {
+      "id": "28_3",
+      "name": "Healing"
+    },
+    {
+      "id": "28_4",
+      "name": "Poison"
+    },
+    {
+      "id": "28_5",
+      "name": "Freezing"
+    },
+    {
+      "id": "28_6",
+      "name": "Bloodsucking"
+    },
+    {
+      "id": "28_7",
+      "name": "Weakening"
+    },
+    {
+      "id": "28_8",
+      "name": "Disperse"
+    },
+    {
+      "id": "28_9",
+      "name": "Wind"
+    },
+    {
+      "id": "28_10",
+      "name": "Armor"
+    },
+    {
+      "id": "28_11",
+      "name": "Barbarian"
+    },
+    {
+      "id": "28_12",
+      "name": "Stun"
+    },
+    {
+      "id": "28_13",
+      "name": "Freezing"
+    },
+    {
+      "id": "28_15",
+      "name": "Lightning Seal"
+    },
+    {
+      "id": "28_17",
+      "name": "Wind"
+    }
+  ]
+}

@@ -4,7 +4,15 @@ import {updateDisplay} from "./display.js";
 (async function() {
   await JsonHandler.initialise();
   [
-    "fighter", "fighter-reset", "fighter-healing", "pet", "totem", "skill", "resistance"
+    "fighter",
+    "fighter-reset",
+    "fighter-healing",
+    "pet",
+    "pet-base",
+    "pet-evo",
+    "totem",
+    "skill",
+    "resistance"
   ].forEach(fillOptions);
 
   updateDisplay();
