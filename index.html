@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>CF Stat Calculator</title>
+
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous" defer></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous" defer></script>
+
+  <!-- css -->
+  <link rel="stylesheet" href="css/display.css">
+  <link rel="stylesheet" href="css/settings.css">
+
+  <!-- js -->
+  <script src="js/main.js" type="module"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="row no-gutters">
+      <div id="display" class="col-md-6">
+        <img id="display-background" src="images/display/background.png" alt="background">
+        <img id="display-hud" src="images/display/hud.png" alt="hud">
+        <canvas id="display-foreground" width="512" height="720"></canvas>
+      </div>
+      <div id="settings" class="col-md-6">
+        <form>
+          <!-- name, level -->
+          <div class="form-group row">
+            <label class="col-sm-2 col-form-label" for="player-name">Name</label>
+            <input type="text" class="col form-control" id="player-name" value="CF Calculator">
+            <label class="col-sm-2 col-form-label" for="player-level">Level</label>
+            <input type="number" class="col-sm-3 form-control" id="player-level" value="100">
+          </div>
+          
+          <!-- fighter -->
+          <div class="form-group row">
+            <label class="col-md-2 col-form-label" for="fighter-select">Fighter</label>
+            <select class="col-md-4 form-control" id="fighter-select">
+              <option></option>
+            </select>
+            <div class="custom-control custom-control-inline custom-control-right custom-switch col-md">
+              <input type="checkbox" class="custom-control-input" id="fighter-evolved">
+              <label class="custom-control-label col-form-label" for="fighter-evolved">Evolved</label>
+            </div>
+              <label class="col-md-1 col-form-label" for="fighter-level">+</label>
+              <input type="number" class="col-md-2 form-control" id="fighter-level" value="0">
+          </div>
+          <!-- e fighter -->
+          <div id="e-fighter-settings">
+            <div class="form-group row">
+              <label class="col-md-2 col-form-label" for="fighter-reset-select">Resets</label>
+              <select class="col-md-10 form-control" id="fighter-reset-select" multiple size="9" aria-describedby="resetSelectHelp">
+              </select>
+              <small id="resetSelectHelp" class="form-text text-muted col">
+                On desktop, hold ctrl to select resets.
+              </small>
+            </div>
+            <div class="form-group row">
+              <label class="col-md-2 col-form-label" for="fighter-healing-select">Healing</label>
+              <select class="col-md-10 form-control" id="fighter-healing-select">
+                <option></option>
+              </select>
+            </div>
+            <div class="form-group row">
+              <label class="col-md-2 col-form-label" for="potential-str">str</label>
+              <input type="number" class="col-md-2 form-control" id="potential-str" value="0">
+              <label class="col-md-2 col-form-label" for="potential-dex">dex</label>
+              <input type="number" class="col-md-2 form-control" id="potential-dex" value="0">
+              <label class="col-md-2 col-form-label" for="potential-sta">sta</label>
+              <input type="number" class="col-md-2 form-control" id="potential-sta" value="0">
+            </div>
+          </div>
+
+          <!-- pet -->
+          <div class="form-group row">
+            <label class="col-md-2 col-form-label" for="pet-select">Pet</label>
+            <select class="col-md-4 form-control" id="pet-select">
+              <option></option>
+            </select>
+            <div class="custom-control custom-control-inline custom-control-right custom-switch col-md">
+              <input type="checkbox" class="custom-control-input" id="pet-evolved">
+              <label class="custom-control-label col-form-label" for="pet-evolved">Evolved</label>
+            </div>
+            <label class="col-md-1 col-form-label" for="pet-level">+</label>
+            <input type="number" class="col-md-2 form-control" id="pet-level" value="0">
+          </div>
+
+          <!-- totem -->
+          <div class="form-group row">
+            <label class="col-md-2 col-form-label" for="totem-select">Totem</label>
+            <select class="col-md-4 form-control" id="totem-select">
+              <option></option>
+            </select>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

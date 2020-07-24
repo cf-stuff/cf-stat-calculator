@@ -1,0 +1,37 @@
+{
+  "url": "../images/totemIcon/tuten[id].png",
+  "data": [
+    {
+      "id": 1,
+      "name": "Black"
+    },
+    {
+      "id": 2,
+      "name": "Purple"
+    },
+    {
+      "id": 3,
+      "name": "Blue"
+    },
+    {
+      "id": 4,
+      "name": "Green"
+    },
+    {
+      "id": 5,
+      "name": "Yellow"
+    },
+    {
+      "id": 6,
+      "name": "Orange"
+    },
+    {
+      "id": 7,
+      "name": "Red"
+    },
+    {
+      "id": 8,
+      "name": "White"
+    }
+  ]
+}

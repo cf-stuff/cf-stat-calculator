@@ -1,0 +1,165 @@
+{
+  "url": "../images/skillIcon/skillIcon[id].png",
+  "data": [
+    {
+      "id": 1,
+      "name": "Fire meteorite"
+    },
+    {
+      "id": 2,
+      "name": "Bacteria"
+    },
+    {
+      "id": 3,
+      "name": "Ghoul Block"
+    },
+    {
+      "id": 4,
+      "name": "Skill Shackles"
+    },
+    {
+      "id": 5,
+      "name": "Freezing Skill"
+    },
+    {
+      "id": 6,
+      "name": "Lightning Ball"
+    },
+    {
+      "id": 7,
+      "name": "Heavy Hammer"
+    },
+    {
+      "id": 8,
+      "name": "Explosive Blow"
+    },
+    {
+      "id": 9,
+      "name": "Bomb"
+    },
+    {
+      "id": 10,
+      "name": "Assassinate"
+    },
+    {
+      "id": 11,
+      "name": "Draw Power"
+    },
+    {
+      "id": 12,
+      "name": "Storm Boxing"
+    },
+    {
+      "id": 13,
+      "name": "Thunderbolt Boxing"
+    },
+    {
+      "id": 14,
+      "name": "Poinsonous Fog"
+    },
+    {
+      "id": 15,
+      "name": "Dark Curse"
+    },
+    {
+      "id": 16,
+      "name": "Fire Shield"
+    },
+    {
+      "id": 17,
+      "name": "Golden Shield"
+    },
+    {
+      "id": 18,
+      "name": "Rejuvenation"
+    },
+    {
+      "id": 19,
+      "name": "Gallop"
+    },
+    {
+      "id": 20,
+      "name": "Earth-Style Wall"
+    },
+    {
+      "id": 21,
+      "name": "Counterattack"
+    },
+    {
+      "id": 22,
+      "name": "Moving Illusion"
+    },
+    {
+      "id": 23,
+      "name": "Blood Frenzy"
+    },
+    {
+      "id": 24,
+      "name": "Fast Move"
+    },
+    {
+      "id": 25,
+      "name": "Time Bomb"
+    },
+    {
+      "id": 26,
+      "name": "Cleanse"
+    },
+    {
+      "id": 27,
+      "name": "Inescapable Net"
+    },
+    {
+      "id": 28,
+      "name": "Violence"
+    },
+    {
+      "id": 29,
+      "name": "Wine"
+    },
+    {
+      "id": 30,
+      "name": "Barbarism"
+    },
+    {
+      "id": 31,
+      "name": "Arrival of Thunder God"
+    },
+    {
+      "id": 32,
+      "name": "Thunderclap Quake"
+    },
+    {
+      "id": 33,
+      "name": "Thorn Shield"
+    },
+    {
+      "id": 34,
+      "name": "Energy Shield"
+    },
+    {
+      "id": 35,
+      "name": "Rebirth"
+    },
+    {
+      "id": 36,
+      "name": "Blood Sacrifice"
+    },
+    {
+      "id": 37,
+      "name": "Anti-damage Chop"
+    },
+    {
+      "id": 38,
+      "name": "Magic Stealing"
+    },
+    {
+      "id": 39,
+      "name": "Wound Infection"
+    },
+    {
+      "id": 40,
+      "name": "Shield Wall"
+    }
+  ]
+}

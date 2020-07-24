@@ -1,0 +1,61 @@
+{
+  "url": "../images/coatSkillIcon/coatskill_icon[id].png",
+  "data": [
+    {
+      "id": 19,
+      "name": "Energy Shield"
+    },
+    {
+      "id": 20,
+      "name": "Blood Frenzy"
+    },
+    {
+      "id": 21,
+      "name": "Golden Shield"
+    },
+    {
+      "id": 22,
+      "name": "Thunder Clap Quake"
+    },
+    {
+      "id": 23,
+      "name": "Thorn Shield"
+    },
+    {
+      "id": 24,
+      "name": "Heavy Hammer"
+    },
+    {
+      "id": 25,
+      "name": "Rejuventation"
+    },
+    {
+      "id": 26,
+      "name": "Ghoul Block"
+    },
+    {
+      "id": 27,
+      "name": "Skill Shackles"
+    },
+    {
+      "id": 38,
+      "name": "Pray"
+    },
+    {
+      "id": 39,
+      "name": "Wine"
+    },
+    {
+      "id": 40,
+      "name": "Shield Wall"
+    },
+    {
+      "id": 41,
+      "name": "Fire Shield"
+    },
+    {
+      "id": 42,
+      "name": "Counterattack"
+    }
+  ]
+}

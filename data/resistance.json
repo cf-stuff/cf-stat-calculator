@@ -1,0 +1,45 @@
+{
+  "url": "../images/elements/skillSet[id].png",
+  "data": [
+    {
+      "id": 1,
+      "name": "water"
+    },
+    {
+      "id": 2,
+      "name": "fire"
+    },
+    {
+      "id": 3,
+      "name": "earth"
+    },
+    {
+      "id": 4,
+      "name": "thunder"
+    },
+    {
+      "id": 5,
+      "name": "wind"
+    },
+    {
+      "id": 6,
+      "name": "taijutsu"
+    },
+    {
+      "id": 7,
+      "name": "ninjutsu"
+    },
+    {
+      "id": 8,
+      "name": "cursed seal jutsu"
+    },
+    {
+      "id": 9,
+      "name": "genjutsu"
+    },
+    {
+      "id": 10,
+      "name": "healing"
+    }
+  ]
+}

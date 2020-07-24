@@ -1,0 +1,18 @@
+.custom-control-right {
+  padding-right: 3.5rem;
+  padding-left: 1rem;
+}
+
+.custom-control-right .custom-control-label::after {
+  margin-top: calc(.375rem + 1px);
+  margin-bottom: calc(.375rem + 1px);
+  right: -1.5rem;
+  left: auto;
+}
+
+.custom-control-right .custom-control-label::before {
+  margin-top: calc(.375rem + 1px);
+  margin-bottom: calc(.375rem + 1px);
+  right: -2.35rem;
+  left: auto;
+}

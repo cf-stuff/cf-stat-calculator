@@ -1,0 +1,65 @@
+{
+  "url": "../images/petIcon/pet_icon_[id].png",
+  "data": [
+    {
+      "id": 1,
+      "name": "Gale Fox"
+    },
+    {
+      "id": 2,
+      "name": "Psychic Dog"
+    },
+    {
+      "id": 3,
+      "name": "Rice Ball"
+    },
+    {
+      "id": 4,
+      "name": "Slime"
+    },
+    {
+      "id": 5,
+      "name": "Polar Penguin"
+    },
+    {
+      "id": 6,
+      "name": "Vampire Bat"
+    },
+    {
+      "id": 7,
+      "name": "Toad King"
+    },
+    {
+      "id": 8,
+      "name": "Ghost Tiger"
+    },
+    {
+      "id": 9,
+      "name": "COCO"
+    },
+    {
+      "id": 10,
+      "name": "Unicorn"
+    },
+    {
+      "id": 11,
+      "name": "Black Dragon"
+    },
+    {
+      "id": 12,
+      "name": "Fenrir"
+    },
+    {
+      "id": 13,
+      "name": "Sleipnir"
+    },
+    {
+      "id": 15,
+      "name": "Rekachu"
+    },
+    {
+      "id": 17,
+      "name": "Snow Fox"
+    }
+  ]  
+}
