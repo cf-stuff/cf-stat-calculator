@@ -10,7 +10,7 @@ const dataNames = [
   "totem"
 ];
 
-const toUrl = item => `../data/${item}.json`;
+const toUrl = item => `data/${item}.json`;
 
 const loadJson = name => fetch(toUrl(name)).then(res => res.json());
 

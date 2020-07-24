@@ -134,7 +134,7 @@ export async function updateDisplay() {
   let petSkillIndex = 0;
   for (let y = 0; y < 3; ++y) {
     for (let x = 0; x < 4; ++x) {
-      ctx.drawImage(await ImageHandler.getImageFromUrl("../images/display/skill-frame.png"), 0, 0, 36, 36, 15 + x * 50, 415 + y * 50, 45, 45);
+      ctx.drawImage(await ImageHandler.getImageFromUrl("images/display/skill-frame.png"), 0, 0, 36, 36, 15 + x * 50, 415 + y * 50, 45, 45);
       if (skillIndex < playerObject.skills.length) {
         ctx.drawImage(await ImageHandler.getImage("skill", playerObject.skills[skillIndex++]), 0, 0, 64, 64, 17 + x * 50, 417 + y * 50, 41, 41);
       } else if (playerObject.pet && petSkillIndex < playerObject.pet.skills.length) {
@@ -152,7 +152,7 @@ export async function updateDisplay() {
   // resets
   let resetIndex = 0;
   for (let x = 0; x < 4; ++x) {
-    ctx.drawImage(await ImageHandler.getImageFromUrl("../images/display/skill-evo-frame.png"), 0, 0, 36, 36, 15 + x * 50, 590, 45, 45);
+    ctx.drawImage(await ImageHandler.getImageFromUrl("images/display/skill-evo-frame.png"), 0, 0, 36, 36, 15 + x * 50, 590, 45, 45);
     if (resetIndex < playerObject.fighter.skills.length) {
       ctx.drawImage(await ImageHandler.getImage("fighter-skills", playerObject.fighter.skills[resetIndex++]), 0, 0, 64, 64, 18 + x * 50, 593, 39, 39);
     }
