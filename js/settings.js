@@ -8,8 +8,9 @@ export function processInput() {
   level.value = constrain(level.value, 1, 100);
 
   // e fighter
+  const fighterSelected = document.getElementById("fighter-select").selectedIndex === 0;
   const evoFighter = document.getElementById("fighter-evolved").checked;
-  document.getElementById("e-fighter-settings").hidden = !evoFighter;
+  document.getElementById("e-fighter-settings").hidden = fighterSelected || !evoFighter;
   const fighterLevel = document.getElementById("fighter-level");
   fighterLevel.value = constrain(fighterLevel.value, evoFighter ? 1 : 0, evoFighter ? 21 : 34);
 
@@ -23,6 +24,7 @@ export function processInput() {
 
   // e pet
   document.getElementById("e-pet-settings").hidden = !document.getElementById("pet-evolved").checked;
+  document.getElementById("pet-evo-select").hidden = !document.getElementById("pet-evolved").checked;
 
   const evoPet = document.getElementById("pet-evolved").checked;
   document.getElementById("e-pet-settings").hidden = !evoPet;

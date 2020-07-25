@@ -56,26 +56,39 @@
           <!-- e fighter -->
           <div id="e-fighter-settings">
             <div class="form-group row">
-              <label class="col-md-3 col-lg-2 col-form-label" for="fighter-reset-select">Resets (max 2)</label>
-              <select class="col-md-9 col-lg-10 form-control" id="fighter-reset-select" multiple size="9" aria-describedby="resetSelectHelp">
-              </select>
-              <small id="resetSelectHelp" class="offset-md-2 form-text text-muted col">
-                On desktop, hold ctrl to select.
-              </small>
+              <label class="col-md-2 col-form-label">Potentials</label>
+              <div class="input-group col-sm pl-0">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">str</span>
+                </div>
+                <input type="number" class="form-control" id="potential-str" value="0" max="360">
+              </div>
+              <div class="input-group col-sm">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">dex</span>
+                </div>
+                <input type="number" class="form-control" id="potential-dex" value="0" max="360">
+              </div>
+              <div class="input-group col-sm pr-0">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">sta</span>
+                </div>
+                <input type="number" class="form-control" id="potential-sta" value="0" max="360">
+              </div>
             </div>
             <div class="form-group row">
-              <label class="col-md-3 col-lg-2 col-form-label" for="fighter-healing-select">Healing</label>
-              <select class="col-md-9 col-lg-10 form-control" id="fighter-healing-select">
+              <label class="col-md-2 col-form-label" for="evo-stat-select">Evo Stats (max 3)</label>
+              <select class="col-md form-control" id="evo-stat-select" multiple size="10">
+              </select>
+              <label class="col-md-2 col-form-label" for="fighter-reset-select">Resets (max 2)</label>
+              <select class="col-md form-control" id="fighter-reset-select" multiple size="10">
+              </select>
+            </div>
+            <div class="form-group row">
+              <label class="col-md-2 col-form-label" for="fighter-healing-select">Healing</label>
+              <select class="col-md form-control" id="fighter-healing-select">
                 <option></option>
               </select>
-            </div>
-            <div class="form-group row">
-              <label class="col-md-2 col-form-label" for="potential-str">str</label>
-              <input type="number" class="col-md-2 form-control" id="potential-str" value="0">
-              <label class="col-md-2 col-form-label" for="potential-dex">dex</label>
-              <input type="number" class="col-md-2 form-control" id="potential-dex" value="0">
-              <label class="col-md-2 col-form-label" for="potential-sta">sta</label>
-              <input type="number" class="col-md-2 form-control" id="potential-sta" value="0">
             </div>
           </div>
 
@@ -97,40 +110,26 @@
             </div>
           </div>
           <div id="pet-settings" class="form-group row">
-            <label class="col-md-3 col-lg-2 col-form-label" for="pet-base-select">Pet Skills (max 12)</label>
-            <select class="col-md-9 col-lg-10 form-control" id="pet-base-select" multiple size="10" aria-describedby="petBaseSelectHelp">
+            <label class="col-md-2 col-form-label" for="pet-base-select">Pet Skills (max 12)</label>
+            <select class="col-md form-control" id="pet-base-select" multiple size="10">
             </select>
-            <small id="petBaseSelectHelp" class="offset-md-2 form-text text-muted col">
-              On desktop, hold ctrl to select.
-            </small>
-          </div>
-          <div id="e-pet-settings" class="form-group row">
-            <label class="col-md-3 col-lg-2 col-form-label" for="pet-evo-select">Evo Pet (max 6)</label>
-            <select class="col-md-9 col-lg-10 form-control" id="pet-evo-select" multiple size="10" aria-describedby="petEvoSelectHelp">
+            <label id="e-pet-settings" class="col-md-2 col-form-label" for="pet-evo-select">Evo Pet (max 6)</label>
+            <select class="col-md form-control" id="pet-evo-select" multiple size="10">
             </select>
-            <small id="petEvoSelectHelp" class="offset-md-2 form-text text-muted col">
-              On desktop, hold ctrl to select.
-            </small>
           </div>
+          
 
-          <!-- resistance -->
+          <!-- resistance and skills -->
           <div class="form-group row">
-            <label class="col-md-3 col-lg-2 col-form-label" for="resistance-select">Resistance (max 2)</label>
-            <select class="col-md-9 col-lg-10 form-control" id="resistance-select" multiple size="10" aria-describedby="resistanceSelectHelp">
+            <label class="col-md-2 col-form-label" for="resistance-select">Resistance (max 2)</label>
+            <select class="col-md form-control" id="resistance-select" multiple size="10">
             </select>
-            <small id="resistanceSelectHelp" class="offset-md-2  form-text text-muted col">
-              On desktop, hold ctrl to select.
-            </small>
-          </div>
-
-          <!-- skills -->
-          <div class="form-group row">
-            <label class="col-md-3 col-lg-2 col-form-label" for="skill-select">Skills (max 7)</label>
-            <select class="col-md-9 col-lg-10 form-control" id="skill-select" multiple size="10" aria-describedby="skillSelectHelp">
+            <label class="col-md-2 col-form-label" for="skill-select">Skills (max 7)</label>
+            <select class="col-md form-control" id="skill-select" multiple size="10">
             </select>
-            <small id="skillSelectHelp" class="offset-md-2  form-text text-muted col">
+            <!-- <small id="skillSelectHelp" class="offset-md-2  form-text text-muted col">
               On desktop, hold ctrl to select.
-            </small>
+            </small> -->
           </div>
 
           <!-- totem -->

@@ -3,6 +3,7 @@ const dataNames = [
   "fighter-healing",
   "fighter-reset",
   "fighter-skills",
+  "evo-stat",
   "pet",
   "pet-base",
   "pet-evo",
