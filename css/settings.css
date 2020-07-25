@@ -1,6 +1,7 @@
 .custom-control-right {
   padding-right: 3.5rem;
   padding-left: 1rem;
+  margin-right: 0;
 }
 
 .custom-control-right .custom-control-label::after {

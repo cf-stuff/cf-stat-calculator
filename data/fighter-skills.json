@@ -56,6 +56,58 @@
     {
       "id": 42,
       "name": "Counterattack"
+    },
+    {
+      "id": 69,
+      "name": "50 def"
+    },
+    {
+      "id": 70,
+      "name": "50 brk"
+    },
+    {
+      "id": 71,
+      "name": "50 res"
+    },
+    {
+      "id": 72,
+      "name": "50 crt"
+    },
+    {
+      "id": 73,
+      "name": "25% hp"
+    },
+    {
+      "id": 74,
+      "name": "50 maxatk"
+    },
+    {
+      "id": 75,
+      "name": "50 hit"
+    },
+    {
+      "id": 76,
+      "name": "30 sp"
+    },
+    {
+      "id": 77,
+      "name": "25% atk"
+    },
+    {
+      "id": 78,
+      "name": "50 eva"
+    },
+    {
+      "id": 79,
+      "name": "130 hp"
+    },
+    {
+      "id": 80,
+      "name": "30 spd"
+    },
+    {
+      "id": 81,
+      "name": "5 fury reversion"
     }
   ]
 }

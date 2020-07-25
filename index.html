@@ -21,42 +21,45 @@
 </head>
 <body>
   <div class="container">
-    <div class="row no-gutters">
-      <div id="display" class="col-md-6">
+    <div class="row">
+      <div id="display" class="col-lg">
         <img id="display-background" src="images/display/background.png" alt="background">
         <img id="display-hud" src="images/display/hud.png" alt="hud">
         <canvas id="display-foreground" width="512" height="720"></canvas>
       </div>
-      <div id="settings" class="col-md-6">
+      <div id="settings" class="col-lg">
         <form>
           <!-- name, level -->
           <div class="form-group row">
             <label class="col-sm-2 col-form-label" for="player-name">Name</label>
-            <input type="text" class="col form-control" id="player-name" value="CF Calculator">
+            <input type="text" class="col form-control" id="player-name" value="CF Calculator" maxlength="13">
             <label class="col-sm-2 col-form-label" for="player-level">Level</label>
-            <input type="number" class="col-sm-3 form-control" id="player-level" value="100">
+            <input type="number" class="col-sm-3 form-control" id="player-level" value="100" min="1" max="100">
           </div>
-          
           <!-- fighter -->
           <div class="form-group row">
             <label class="col-md-2 col-form-label" for="fighter-select">Fighter</label>
-            <select class="col-md-4 form-control" id="fighter-select">
-              <option></option>
-            </select>
-            <div class="custom-control custom-control-inline custom-control-right custom-switch col-md">
+            <div class="input-group col-sm pl-0">
+              <select class="col form-control" id="fighter-select">
+                <option></option>
+              </select>
+              <div class="input-group-prepend input-group-append">
+                <span class="input-group-text">+</span>
+              </div>
+              <input type="number" class="form-control col-3" id="fighter-level" value="0" max="34">
+            </div>
+            <div class="custom-control custom-control-right custom-switch">
               <input type="checkbox" class="custom-control-input" id="fighter-evolved">
               <label class="custom-control-label col-form-label" for="fighter-evolved">Evolved</label>
             </div>
-              <label class="col-md-1 col-form-label" for="fighter-level">+</label>
-              <input type="number" class="col-md-2 form-control" id="fighter-level" value="0">
           </div>
           <!-- e fighter -->
           <div id="e-fighter-settings">
             <div class="form-group row">
-              <label class="col-md-3 col-lg-2 col-form-label" for="fighter-reset-select">Resets</label>
+              <label class="col-md-3 col-lg-2 col-form-label" for="fighter-reset-select">Resets (max 2)</label>
               <select class="col-md-9 col-lg-10 form-control" id="fighter-reset-select" multiple size="9" aria-describedby="resetSelectHelp">
               </select>
-              <small id="resetSelectHelp" class="form-text text-muted col">
+              <small id="resetSelectHelp" class="offset-md-2 form-text text-muted col">
                 On desktop, hold ctrl to select.
               </small>
             </div>
@@ -79,49 +82,53 @@
           <!-- pet -->
           <div class="form-group row">
             <label class="col-md-2 col-form-label" for="pet-select">Pet</label>
-            <select class="col-md-4 form-control" id="pet-select">
-              <option></option>
-            </select>
-            <div class="custom-control custom-control-inline custom-control-right custom-switch col-md">
+            <div class="input-group col-sm pl-0">
+              <select class="col form-control" id="pet-select">
+                <option></option>
+              </select>
+              <div class="input-group-prepend input-group-append">
+                <span class="input-group-text">+</span>
+              </div>
+              <input type="number" class="form-control col-3" id="pet-level" value="0" max="27">
+            </div>
+            <div class="custom-control custom-control-right custom-switch">
               <input type="checkbox" class="custom-control-input" id="pet-evolved">
               <label class="custom-control-label col-form-label" for="pet-evolved">Evolved</label>
             </div>
-            <label class="col-md-1 col-form-label" for="pet-level">+</label>
-            <input type="number" class="col-md-2 form-control" id="pet-level" value="0">
           </div>
           <div id="pet-settings" class="form-group row">
-            <label class="col-md-3 col-lg-2 col-form-label" for="pet-base-select">Pet Skills</label>
+            <label class="col-md-3 col-lg-2 col-form-label" for="pet-base-select">Pet Skills (max 12)</label>
             <select class="col-md-9 col-lg-10 form-control" id="pet-base-select" multiple size="10" aria-describedby="petBaseSelectHelp">
             </select>
-            <small id="petBaseSelectHelp" class="form-text text-muted col">
+            <small id="petBaseSelectHelp" class="offset-md-2 form-text text-muted col">
               On desktop, hold ctrl to select.
             </small>
           </div>
           <div id="e-pet-settings" class="form-group row">
-            <label class="col-md-3 col-lg-2 col-form-label" for="pet-evo-select">Evo Pet</label>
+            <label class="col-md-3 col-lg-2 col-form-label" for="pet-evo-select">Evo Pet (max 6)</label>
             <select class="col-md-9 col-lg-10 form-control" id="pet-evo-select" multiple size="10" aria-describedby="petEvoSelectHelp">
             </select>
-            <small id="petEvoSelectHelp" class="form-text text-muted col">
+            <small id="petEvoSelectHelp" class="offset-md-2 form-text text-muted col">
               On desktop, hold ctrl to select.
             </small>
           </div>
 
           <!-- resistance -->
           <div class="form-group row">
-            <label class="col-md-3 col-lg-2 col-form-label" for="resistance-select">Resistance</label>
+            <label class="col-md-3 col-lg-2 col-form-label" for="resistance-select">Resistance (max 2)</label>
             <select class="col-md-9 col-lg-10 form-control" id="resistance-select" multiple size="10" aria-describedby="resistanceSelectHelp">
             </select>
-            <small id="resistanceSelectHelp" class="form-text text-muted col">
+            <small id="resistanceSelectHelp" class="offset-md-2  form-text text-muted col">
               On desktop, hold ctrl to select.
             </small>
           </div>
 
           <!-- skills -->
           <div class="form-group row">
-            <label class="col-md-3 col-lg-2 col-form-label" for="skill-select">Skills</label>
+            <label class="col-md-3 col-lg-2 col-form-label" for="skill-select">Skills (max 7)</label>
             <select class="col-md-9 col-lg-10 form-control" id="skill-select" multiple size="10" aria-describedby="skillSelectHelp">
             </select>
-            <small id="skillSelectHelp" class="form-text text-muted col">
+            <small id="skillSelectHelp" class="offset-md-2  form-text text-muted col">
               On desktop, hold ctrl to select.
             </small>
           </div>

@@ -3,43 +3,43 @@
   "data": [
     {
       "id": 1,
-      "name": "water"
+      "name": "Water"
     },
     {
       "id": 2,
-      "name": "fire"
+      "name": "Fire"
     },
     {
       "id": 3,
-      "name": "earth"
+      "name": "Earth"
     },
     {
       "id": 4,
-      "name": "thunder"
+      "name": "Thunder"
     },
     {
       "id": 5,
-      "name": "wind"
+      "name": "Wind"
     },
     {
       "id": 6,
-      "name": "taijutsu"
+      "name": "Taijutsu"
     },
     {
       "id": 7,
-      "name": "ninjutsu"
+      "name": "Ninjutsu"
     },
     {
       "id": 8,
-      "name": "cursed seal jutsu"
+      "name": "Cursed Seal Jutsu"
     },
     {
       "id": 9,
-      "name": "genjutsu"
+      "name": "Genjutsu"
     },
     {
       "id": 10,
-      "name": "healing"
+      "name": "Healing"
     }
   ]
 }

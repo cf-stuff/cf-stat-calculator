@@ -3,6 +3,10 @@ import JsonHandler from "./JsonHandler.js";
 const constrain = (x, min, max) => Math.min(Math.max(x, min), max);
 
 export function processInput() {
+  // level
+  const level = document.getElementById("player-level");
+  level.value = constrain(level.value, 1, 100);
+
   // e fighter
   const evoFighter = document.getElementById("fighter-evolved").checked;
   document.getElementById("e-fighter-settings").hidden = !evoFighter;

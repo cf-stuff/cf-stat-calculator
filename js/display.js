@@ -62,7 +62,7 @@ export async function updateDisplay() {
   ctx.fillStyle = "#ffffff";
   ctx.fillText("Resistance", 15, 240);
   for (let i = 0; i < playerObject.resistance.length; ++i)
-    ctx.drawImage(await ImageHandler.getImage("resistance", playerObject.resistance[i]), 120 + 45 * i, 215, 39, 36.5);
+    ctx.drawImage(await ImageHandler.getImage("resistance", playerObject.resistance[i]), 120 + 40 * i, 215, 39, 36.5);
   
   lineSeparator(ctx, 250);
 
