@@ -4,8 +4,13 @@ import {processInput, createPlayerObject} from "./settings.js";
 export async function updateDisplay() {
   processInput();
 
-  const ctx = document.getElementById("display-foreground").getContext("2d");
-  ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+  const foreground = document.getElementById("display-foreground");
+  const buffer = document.createElement("canvas");
+  buffer.width = foreground.width;
+  buffer.height = foreground.height;
+
+  const ctx = buffer.getContext("2d");
+  ctx.clearRect(0, 0, buffer.width, buffer.height);
 
   const playerObject = createPlayerObject();
 
@@ -14,12 +19,12 @@ export async function updateDisplay() {
   }
 
   // name
-  ctx.font = "bold 1.3em arial";
+  ctx.font = "bold 21px arial";
   ctx.fillStyle = "#000000";
   ctx.fillText(`${playerObject.name}`, 107, 29);
 
   // level
-  ctx.font = "1.3em arial";
+  ctx.font = "21px arial";
   ctx.fillStyle = "#FFFFFF";
   const playerLevel = playerObject.level;
   ctx.fillText(`lv${playerLevel.length === 3 ? "" : "l"}: ${playerObject.level}`, 13, 118);
@@ -37,7 +42,7 @@ export async function updateDisplay() {
 
   // fighter + pet
   ctx.drawImage(await ImageHandler.getImage("fighter", playerObject.fighter.id), 35, 20);
-  ctx.font = "bold 1em arial";
+  ctx.font = "bold 16px arial";
   ctx.fillStyle = "#a15f08";
   ctx.fillText(`${playerObject.fighter.name}`, 15, 180);
   if (playerObject.pet) ctx.fillText(`${playerObject.pet.name}`, 15, 200);
@@ -45,7 +50,7 @@ export async function updateDisplay() {
   const fighterNameWidth = ctx.measureText(playerObject.fighter.name).width;
   const petNameWidth = (playerObject.pet) ? ctx.measureText(playerObject.pet.name).width : 0;
 
-  ctx.font = "1em arial";
+  ctx.font = "16px arial";
   ctx.fillStyle = "#c2ac3d";
   ctx.fillText(` +${playerObject.fighter.plus}`, 15 + fighterNameWidth, 180);
   if (playerObject.pet) ctx.fillText(` +${playerObject.pet.plus}`, 15 + petNameWidth, 200);
@@ -53,11 +58,11 @@ export async function updateDisplay() {
   lineSeparator(ctx, 210);
 
   // resistance
-  ctx.font = "1.2em arial";
+  ctx.font = "19px arial";
   ctx.fillStyle = "#ffffff";
   ctx.fillText("Resistance", 15, 240);
-  playerObject.resistance.forEach(async (x, i) => ctx.drawImage(
-    await ImageHandler.getImage("resistance", x), 0, 0, 78, 73, 120 + 45 * i, 215, 39, 36.5));
+  for (let i = 0; i < playerObject.resistance.length; ++i)
+    ctx.drawImage(await ImageHandler.getImage("resistance", playerObject.resistance[i]), 120 + 45 * i, 215, 39, 36.5);
   
   lineSeparator(ctx, 250);
 
@@ -71,44 +76,46 @@ export async function updateDisplay() {
   let petSkillIndex = 0;
   for (let y = 0; y < 3; ++y) {
     for (let x = 0; x < 4; ++x) {
-      ctx.drawImage(await ImageHandler.getImageFromUrl("images/display/skill-frame.png"), 0, 0, 36, 36, 15 + x * 50, 415 + y * 50, 45, 45);
+      ctx.drawImage(await ImageHandler.getImageFromUrl("images/display/skill-frame.png"), 15 + x * 50, 415 + y * 50, 45, 45);
       if (skillIndex < Math.min(6, playerObject.skills.length)) {
-        ctx.drawImage(await ImageHandler.getImage("skill", playerObject.skills[skillIndex++]), 0, 0, 64, 64, 17 + x * 50, 417 + y * 50, 41, 41);
+        ctx.drawImage(await ImageHandler.getImage("skill", playerObject.skills[skillIndex++]), 17 + x * 50, 417 + y * 50, 41, 41);
       } else if (playerObject.pet && petSkillIndex < playerObject.pet.skills.length) {
-        ctx.drawImage(await ImageHandler.getImage("petSkill", playerObject.pet.skills[petSkillIndex++]), 0, 0, 64, 64, 17 + x * 50, 417 + y * 50, 41, 41);
+        ctx.drawImage(await ImageHandler.getImage("petSkill", playerObject.pet.skills[petSkillIndex++]), 17 + x * 50, 417 + y * 50, 41, 41);
       } else if (skillIndex < playerObject.skills.length) {
-        ctx.drawImage(await ImageHandler.getImage("skill", playerObject.skills[skillIndex++]), 0, 0, 64, 64, 17 + x * 50, 417 + y * 50, 41, 41);
+        ctx.drawImage(await ImageHandler.getImage("skill", playerObject.skills[skillIndex++]), 17 + x * 50, 417 + y * 50, 41, 41);
       }
     }
   }
 
-  if (playerObject.fighter.skills.length === 0) {
-    return;
-  }
-
-  lineSeparator(ctx, 575);
-
   // resets
+  if (playerObject.fighter.skills.length > 0) {
+    lineSeparator(ctx, 575);
+
   let resetIndex = 0;
   for (let x = 0; x < 4; ++x) {
-    ctx.drawImage(await ImageHandler.getImageFromUrl("images/display/skill-evo-frame.png"), 0, 0, 36, 36, 15 + x * 50, 590, 45, 45);
+    ctx.drawImage(await ImageHandler.getImageFromUrl("images/display/skill-evo-frame.png"), 15 + x * 50, 590, 45, 45);
     if (resetIndex < playerObject.fighter.skills.length) {
-      ctx.drawImage(await ImageHandler.getImage("fighter-skills", playerObject.fighter.skills[resetIndex++]), 0, 0, 64, 64, 17 + x * 50, 592, 41, 41);
+      ctx.drawImage(await ImageHandler.getImage("fighter-skills", playerObject.fighter.skills[resetIndex++]), 17 + x * 50, 592, 41, 41);
     }
   }
+  }
+
+  
+
+  const fg = foreground.getContext("2d");
+  fg.clearRect(0, 0, fg.canvas.width, fg.canvas.height);
+  fg.drawImage(buffer, 0, 0);
 }
 
 function displayStats(ctx, stats) {
   // hp + sp
-  ctx.font = "1.3em arial";
+  ctx.font = "21px arial";
   ctx.fillStyle = "#FFFFFF";
-  ctx.textAlign = "center";
-  ctx.fillText(`${stats.hp}/${stats.hp}`, 290, 53);
-  ctx.fillText(`${stats.sp}/${stats.sp}`, 320, 82);
+  ctx.fillText(`${stats.hp}/${stats.hp}`, 235, 53);
+  ctx.fillText(`${stats.sp}/${stats.sp}`, 285, 82);
 
   // stat names
-  ctx.textAlign = "start";
-  ctx.font = "1.1em arial";
+  ctx.font = "18px arial";
   ctx.fillStyle = "#ffffff";
   ctx.fillText("ATK", 15, 280);
   ctx.fillText("SPD", 15, 305);
@@ -129,7 +136,6 @@ function displayStats(ctx, stats) {
   ctx.fillText(` ${stats.def}`, 140, 355);
   ctx.fillText(` ${stats.crt}`, 50, 380);
   ctx.fillText(` ${stats.res}`, 140, 380);
-  
 }
 
 function lineSeparator(ctx, y) {
