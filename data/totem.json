@@ -3,35 +3,115 @@
   "data": [
     {
       "id": 1,
-      "name": "Black"
+      "name": "Black",
+      "stats": {
+        "hit": 32,
+        "brk": 8,
+        "crt": 8,
+        "atk%": 0.8,
+        "hp%": 0.8,
+        "res": 8,
+        "def": 8,
+        "eva": 8
+      }
     },
     {
       "id": 2,
-      "name": "Purple"
+      "name": "Purple",
+      "stats": {
+        "hit": 40,
+        "brk": 40,
+        "crt": 16,
+        "atk%": 1.6,
+        "hp%": 1.6,
+        "res": 16,
+        "def": 16,
+        "eva": 16
+      }
     },
     {
       "id": 3,
-      "name": "Blue"
+      "name": "Blue",
+      "stats": {
+        "hit": 48,
+        "brk": 48,
+        "crt": 48,
+        "atk%": 2.4,
+        "hp%": 2.4,
+        "res": 24,
+        "def": 24,
+        "eva": 24
+      }
     },
     {
       "id": 4,
-      "name": "Green"
+      "name": "Green",
+      "stats": {
+        "hit": 56,
+        "brk": 56,
+        "crt": 56,
+        "atk%": 5.6,
+        "hp%": 3.2,
+        "res": 32,
+        "def": 32,
+        "eva": 32
+      }
     },
     {
       "id": 5,
-      "name": "Yellow"
+      "name": "Yellow",
+      "stats": {
+        "hit": 72,
+        "brk": 72,
+        "crt": 72,
+        "atk%": 7.2,
+        "hp%": 7.2,
+        "res": 48,
+        "def": 48,
+        "eva": 48
+      }
     },
     {
       "id": 6,
-      "name": "Orange"
+      "name": "Orange",
+      "stats": {
+        "hit": 88,
+        "brk": 88,
+        "crt": 88,
+        "atk%": 8.8,
+        "hp%": 8.8,
+        "res": 88,
+        "def": 64,
+        "eva": 64
+      }
     },
     {
       "id": 7,
-      "name": "Red"
+      "name": "Red",
+      "stats": {
+        "hit": 104,
+        "brk": 104,
+        "crt": 104,
+        "atk%": 10.4,
+        "hp%": 10.4,
+        "res": 104,
+        "def": 104,
+        "eva": 80
+      }
     },
     {
       "id": 8,
-      "name": "White"
+      "name": "White",
+      "stats": {
+        "hit": 120,
+        "brk": 120,
+        "crt": 120,
+        "atk%": 12,
+        "hp%": 12,
+        "res": 120,
+        "def": 120,
+        "eva": 120
+      }
     }
   ]
 }

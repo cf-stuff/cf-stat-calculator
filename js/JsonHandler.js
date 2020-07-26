@@ -1,4 +1,5 @@
 const dataNames = [
+  "arena",
   "fighter",
   "fighter-healing",
   "fighter-reset",

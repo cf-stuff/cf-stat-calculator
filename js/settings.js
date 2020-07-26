@@ -1,4 +1,6 @@
 import JsonHandler from "./JsonHandler.js";
+import {handleExclusivePetSkills, getPetInfo} from "./pet.js";
+import {getTotemInfo, updateTotem} from "./totem.js";
 
 const constrain = (x, min, max) => Math.min(Math.max(x, min), max);
 
@@ -23,34 +25,14 @@ export function processInput() {
   }
 
   // e pet
-  document.getElementById("e-pet-settings").hidden = !document.getElementById("pet-evolved").checked;
-  document.getElementById("pet-evo-select").hidden = !document.getElementById("pet-evolved").checked;
-
   const evoPet = document.getElementById("pet-evolved").checked;
   document.getElementById("e-pet-settings").hidden = !evoPet;
+  document.getElementById("pet-evo-select").hidden = !evoPet;
   const petLevel = document.getElementById("pet-level");
   petLevel.value = constrain(petLevel.value, evoPet ? 1 : 0, evoPet ? 21 : 27);
-}
 
-function handleExclusivePetSkills() {
-  const selectedPetId = getPetInfo().id;
-  const petBaseSelect = document.getElementById("pet-base-select");
-  ["27", "28"].forEach(x => {
-    const specialSelected = [...petBaseSelect.options]
-    .filter(option => option.value.startsWith(x))
-    .some(option => option.selected);
-    [...petBaseSelect.options]
-    .filter(option => option.value.startsWith(x))
-    .forEach(option => {
-      if (option.value.split("_")[1] === selectedPetId) {
-        option.hidden = false;
-        option.selected = specialSelected;
-      } else {
-        option.selected = false;
-        option.hidden = true;
-      }
-    });
-  });
+  // totem
+  updateTotem();
 }
 
 export function createPlayerObject() {
@@ -106,63 +88,10 @@ function getFighterInfo() {
   return {
     id: fighterId,
     evo,
-    name: JsonHandler.getJson("fighter").data.filter(x => x.id == fighterId)[0].name,
+    name: JsonHandler.getJson("fighter").data.find(x => x.id == fighterId).name,
     plus: document.getElementById("fighter-level").value,
     skills
   };
-}
-
-function getPetInfo() {
-  const petSelect = document.getElementById("pet-select");
-  if (petSelect.selectedIndex === 0) {
-    return null;
-  }
-  const petId = petSelect.options[petSelect.selectedIndex].value;
-
-  const skills = [];
-  const possibleSkills = ["25", "26", "28"];
-  [...document.getElementById("pet-base-select").options]
-  .filter(options => options.selected)
-  .map(option => option.value)
-  .forEach(id => {
-    if (possibleSkills.some(x => id.startsWith(x))) {
-      skills.push(id);
-    }
-  });
-  let passiveAdded = false;
-  let activeAdded = false;
-  [...document.getElementById("pet-evo-select").options]
-  .filter(options => options.selected)
-  .map(option => option.value)
-  .filter(id => id > 90)
-  .forEach(id => {
-    if (id < 100) {
-      if (!passiveAdded) {
-        skills.push(id);
-        passiveAdded = true;
-      }
-    } else {
-      if (!activeAdded) {
-        skills.push(id);
-        activeAdded = true;
-      }
-    }
-  });
-  return {
-    id: petId,
-    evo: document.getElementById("pet-evolved").checked,
-    name: JsonHandler.getJson("pet").data.filter(x => x.id == petId)[0].name,
-    plus: document.getElementById("pet-level").value,
-    skills
-  };
-}
-
-function getTotemInfo() {
-  const totemSelect = document.getElementById("totem-select");
-  if (totemSelect.selectedIndex === 0) {
-    return null;
-  }
-  return totemSelect.options[totemSelect.selectedIndex].value;
 }
 
 function getResistance() {

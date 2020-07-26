@@ -11,7 +11,6 @@ import {updateDisplay} from "./display.js";
 function fillOptions() {
   document.querySelectorAll("select").forEach(select => {
     const name = select.id.slice(0, -7);
-    console.log(name);
     JsonHandler.getJson(name).data
     .forEach(x => {
       const option = document.createElement("option");
